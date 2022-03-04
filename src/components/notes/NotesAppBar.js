@@ -11,7 +11,7 @@ export const NotesAppBar = () => {
 
   return (
     <div className="notes__appbar">
-      <span>28 de agosto 2021</span>
+      <span>{new Date().toLocaleString() + ""}</span>
       <div>
         <button className="btn" onClick={handleSave}>
           Save

@@ -32,37 +32,30 @@ export const NoteScreen = () => {
   return (
     <div className="notes__main-content  nimate__animated animate__fadeIn animate__faster">
       <NotesAppBar />
-      <div className="notes__content">
-        <input
-          type="text"
-          name="title"
-          placeholder="Some awesome title"
-          className="notes__title-input"
-          autoComplete="off"
-          value={title}
-          onChange={handleInputChange}
-        />
+      <div className="notes__div">
+        <div className="notes__content">
+          <input
+            type="text"
+            name="title"
+            placeholder="Title"
+            className="notes__title-input"
+            autoComplete="off"
+            value={title}
+            onChange={handleInputChange}
+          />
 
-        <textarea
-          name="body"
-          placeholder="'What happened today"
-          className="notes__textarea"
-          value={body}
-          onChange={handleInputChange}
-        ></textarea>
-
-        {note.url && (
-          <div className="notes__image">
-            <img
-              src="https://img.freepik.com/vector-gratis/escena-naturaleza-rio-colinas-bosque-montana-ilustracion-estilo-dibujos-animados-planos-paisaje_1150-37326.jpg?size=626&ext=jpg&ga=GA1.2.1352958084.1641772800"
-              alt="imagen"
-            />
-          </div>
-        )}
+          <textarea
+            name="body"
+            placeholder="Note content"
+            className="notes__textarea"
+            value={body}
+            onChange={handleInputChange}
+          ></textarea>
+          <button className="btn btn-danger" onClick={handleDelete}>
+            delete note
+          </button>
+        </div>
       </div>
-      <button className="btn btn-danger" onClick={handleDelete}>
-        delete note
-      </button>
     </div>
   );
 };

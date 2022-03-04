@@ -92,7 +92,7 @@ export const RegisterScreen = () => {
           Register
         </button>
 
-        <Link to="/auth/login" className="link">
+        <Link to="/auth/login" className="link new-acc">
           Already registered?
         </Link>
       </form>
